@@ -157,6 +157,7 @@ ALXSWE Team Project.
 
 
 ###Authors###
+
 ~Maragia Rodgers<ROckjunior/> https://github.com/Rockjunior
 
 ~Truther Kadipir<Kadimastermind/> https://github.com/kadimastermind
