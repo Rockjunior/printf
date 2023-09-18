@@ -3,11 +3,11 @@
 * linking the code
 */
 
-int main()
-{
+int main() {
     // Your code here
     return 0; // This is the exit status of the program
 }
+
 
 //Auth
 /*
