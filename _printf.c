@@ -54,11 +54,11 @@ int _printf(const char *format, ...)
 /**
  * print_buffer - Prints the contents of the buffer if it exist
  * @buffer: Array of chars
- * @buff_ind: Index at which to add next char, represents the length.
+ * @index: Index at which to add next char, represents the length.
  */
 void print_buffer(char buffer[], int *index)
 {
-	if (*buff_ind > 0)
+	if (*index > 0)
 		write(1, &buffer[0], *index);
 
 	*index = 0;
