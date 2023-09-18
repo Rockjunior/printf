@@ -44,8 +44,3 @@ Here:
 	va_end(args);
 	return (len);
 }
-
-/*<CODERS/>
-~Rockjunior
-~Kadimastermind
-*/
