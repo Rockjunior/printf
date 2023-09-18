@@ -1,5 +1,5 @@
-#ifndef MY_PRINTF_H
-#define MY_PRINTF_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,44 +7,43 @@
 #include <limits.h>
 #include <unistd.h>
 
+
+
 /**
-struct format : takes and matches conversion specifiers for printf
-@fd : type char ptr of the specifier for (d,i,b,u,o,x,X,S,p,+,space,#,l,h,r,R,)
-@f : type ptr to function for conversion specier
-*/
+ * struct format - match the conversion specifiers for printf
+ * @id: type char pointer of the specifier i.e (l, h) for (d, i, u, o, x, X)
+ * @f: type pointer to function for the conversion specifier
+ *
+ */
 
-typedef struct PrintSpec {
-    char *specifier;
-    int (*print_function)();
-} PrintSpec;
+typedef struct format
+{
+	char *id;//specifier
+	int (*f)();//print function
+} convert_match;
 
-int custom_printf_pointer(va_list val);
-int custom_printf_hex_aux(unsigned long int num);
-int custom_printf_HEX_aux(unsigned int num);
-int custom_printf_custom_string(va_list val);
-int custom_printf_HEX(va_list val);
-int custom_printf_hex(va_list val);
-int custom_printf_oct(va_list val);
-int custom_printf_unsigned(va_list args);
-int custom_printf_binary(va_list val);
-int custom_printf_reverse(va_list args);
-int custom_printf_rot13(va_list args);
-int custom_printf_int(va_list args);
-int custom_printf_decimal(va_list args);
-int custom_strlen(char *s);
-int custom_strcpy(char *dest, char *src);
-int custom_strlenc(const char *s);
-int custom_reverse_string(char *s);
-int custom_strlenc(const char *s);
-int custom_printf_percent(void);
-int custom_printf_char(va_list val);
-int custom_printf_string(va_list val);
-int custom_putchar(char c);
-int my_printf(const char *format, ...);
+int printf_pointer(va_list val);
+int printf_hex_aux(unsigned long int num);
+int printf_HEX_aux(unsigned int num);
+int printf_exclusive_string(va_list val);
+int printf_HEX(va_list val);
+int printf_hex(va_list val);
+int printf_oct(va_list val);
+int printf_unsigned(va_list args);
+int printf_bin(va_list val);
+int printf_srev(va_list args);
+int printf_rot13(va_list args);
+int printf_int(va_list args);
+int printf_dec(va_list args);
+int _strlen(char *s);
+int *_strcpy(char *dest, char *src);
+int _strlenc(const char *s);
+int rev_string(char *s);
+int _strlenc(const char *s);
+int printf_37(void);
+int printf_char(va_list val);
+int printf_string(va_list val);
+int _putchar(char c);
+int _printf(const char *format, ...);
 
 #endif
-
-/*<CODERS/>
-~Rockjunior
-~Kadimastermind
-*/
